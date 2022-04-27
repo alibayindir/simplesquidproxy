@@ -1,0 +1,11 @@
+services:
+  squid:
+    container_name: squid-proxy
+    image: ubuntu/squid
+    environment:
+      - TZ=Europe/Istanbul
+    ports:
+      - 3128:3128
+    volumes:
+      - ${PWD}/:/etc/squid
+    
